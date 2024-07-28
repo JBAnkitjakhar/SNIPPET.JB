@@ -7,30 +7,20 @@ import { useAuth } from '@clerk/nextjs';
 import Link from 'next/link';
 
 export default function Home() {
-  // return (
-  //   <div className="poppins bg-blue min-h-screen">
-  //     <Navbar />
-  //     <CTASection />
-  //   </div>
-  // );
-  return(
-    <div>
+  return (
+    <div className="font-poppins min-h-screen bg-gray-100">
       <Navbar />
       <CTASection />
     </div>
-  )
-} 
+  );
+}
 
 function Navbar() {
   return (
-    /* className="flex justify-between items-center py-5 px-8 max-sm:mt-9 max-sm:flex-col max-sm:items-start"  
-    className={`bg-[${mainColor}] text-white py-2 px-6 rounded-md text-sm max-sm:flex-grow`}
-    
-    */
-    <nav >   
-      <Logo />
-      <Buttons />
-    </nav>
+        <div className="flex m-5 max-sm:mt-9 mx-8 items-center justify-between max-sm:flex-col">
+          <Logo />
+          <Buttons />
+        </div>
   );
 }
 
@@ -76,15 +66,16 @@ function Buttons() {
 
 function CTASection() {
   return (
-    <div className="flex flex-col items-center text-center px-4 mt-[120px]">
-      <h1 className="text-4xl font-bold mb-4">
-        Organize Your Code Snippets <span className={`text-[${mainColor}]`}>Efficiently!</span>
-      </h1>
-      <p className="text-gray-600 mb-8 max-w-2xl">
-        With our advanced tagging and search features, you can quickly find the snippet you need, right when you need it. Spend less time searching for code and more time writing it.
+    <div className="text-center max-w-3xl mx-auto mt-20">
+      <h2 className="text-3xl font-bold mb-4">
+        Organize your code snippets <span className="text-primary">Efficiently!</span>
+      </h2>
+      <p className="text-gray-600 mb-8">
+        With our advanced tagging and search features, you can quickly find the snippet you 
+        need, right when you need it. Spend less time searching for code and more time writing it.
       </p>
-      <button className={`bg-[${mainColor}] text-white py-3 px-8 rounded-md text-lg font-semibold hover:bg-[${mainColor}]/90 transition-colors`}>
-        Lets Get Started
+      <button className="bg-primary text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition">
+         Lets get started!
       </button>
     </div>
   );
